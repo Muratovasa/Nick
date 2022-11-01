@@ -18,7 +18,7 @@ public class Main {
 
         Thread thread1=new Thread(() -> {
             for (String s : texts) {
-                if (s.length() == 3 & (Check.palindrom() || Check.oneLatter(s) || Check.vozrastanie(s))) {
+                if (s.length() == 3 & (Check.palindrom(s) || Check.oneLatter(s) || Check.vozrastanie(s))) {
                     count3.getAndIncrement();
                 }
             }
@@ -27,7 +27,7 @@ public class Main {
 
         Thread thread2=new Thread(() -> {
             for (String s : texts) {
-                if (s.length() == 4 & (Check.palindrom() || Check.oneLatter(s) || Check.vozrastanie(s))) {
+                if (s.length() == 4 & (Check.palindrom(s) || Check.oneLatter(s) || Check.vozrastanie(s))) {
                     count4.getAndIncrement();
                 }
             }
@@ -36,7 +36,7 @@ public class Main {
 
         Thread thread3=new Thread(() -> {
             for (String s : texts) {
-                if (s.length() == 5 & (Check.palindrom() || Check.oneLatter(s) || Check.vozrastanie(s))) {
+                if (s.length() == 5 & (Check.palindrom(s) || Check.oneLatter(s) || Check.vozrastanie(s))) {
                     count5.getAndIncrement();
                 }
             }

@@ -3,10 +3,10 @@ package main.java;
 import java.util.Random;
 
 public class Check {
-    public static boolean palindrom() {
-        StringBuffer stringBuffer = new StringBuffer(String.valueOf(Main.texts));
-        String s1 = String.valueOf(stringBuffer.reverse());
-        String s2 = s1.toString();
+    public static boolean palindrom(String s1) {
+        StringBuffer stringBuffer = new StringBuffer(s1);
+        stringBuffer.reverse();
+        String s2 = stringBuffer.toString();
         if (s1.equals(s2)) {
             return true;
         } else {
@@ -16,7 +16,7 @@ public class Check {
 
     public static boolean oneLatter(String s) {
         char ch1 = s.charAt(0);
-        for (int i = 0; i < Main.texts.length; i++) {
+        for (int i = 0; i < s.length(); i++) {
             if (ch1 != s.charAt(i)) {
                 return false;
             }
